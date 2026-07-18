@@ -47,7 +47,8 @@ class RerunVisualizer:
         self.num_viz_cameras = num_viz_cameras
         self.image_size = image_size
         self.show_gravity = show_gravity
-        rr.init("cuVSLAM Visualizer", spawn=True)
+        rr.serve_grpc()
+        rr.serve_web_viewer(open_browser=False)
         rr.log("world", rr.ViewCoordinates.RIGHT_HAND_Y_DOWN, static=True)
 
         # Set up the visualization layout
