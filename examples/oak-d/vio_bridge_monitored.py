@@ -60,7 +60,7 @@ except Exception as _ros_err:          # noqa: BLE001 - report lazily in main()
     _ROS_IMPORT_ERROR = _ros_err
 
 # ------------------------------ config ---------------------------------------
-FPS = 30
+FPS = 10
 RESOLUTION = (640, 480)          # OV7251 native VGA
 WARMUP_FRAMES = 60
 CM_TO_M = 100.0
